@@ -29,7 +29,7 @@ export default async function Home({
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Apicultura Elite',
-    image: 'https://images.unsplash.com/photo-1587334274328-64186a80aeee?auto=format&fit=crop&q=80&w=800',
+    image: 'https://apiculturaelite.pe/logo-seo.png',
     description: 'Venta de miel 100% pura y equipamiento profesional para apicultura en Huancayo. Especialistas en derivados de la colmena.',
     '@id': 'https://apiculturaelite.pe',
     url: 'https://apiculturaelite.pe',

@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/api/images/jean/logo-1770568717019.jpeg', // Using current available logo
+        url: 'https://apiculturaelite.pe/logo-seo.png',
         width: 1200,
         height: 630,
         alt: 'Apicultura Elite Logo',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: 'Apicultura Elite',
     description: 'Excelencia apícola en el centro del país. Miel pura y equipos de alta gama.',
     creator: '@apiculturaelite',
-    images: ['/api/images/jean/logo-1770568717019.jpeg'],
+    images: ['https://apiculturaelite.pe/logo-seo.png'],
   },
   robots: {
     index: true,
