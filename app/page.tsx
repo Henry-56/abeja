@@ -126,7 +126,7 @@ export default async function Home({
               EXPLORAR CATÁLOGO <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="https://wa.me/51943677832"
+              href="https://wa.me/51923614856"
               className="px-10 py-5 bg-white text-zinc-900 border border-zinc-200 rounded-2xl font-bold hover:bg-zinc-50 transition-all shadow-sm flex items-center gap-2 hover:border-zinc-300"
             >
               Contactar Experto
