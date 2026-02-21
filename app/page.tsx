@@ -33,11 +33,11 @@ export default async function Home({
     description: 'Venta de miel 100% pura y equipamiento profesional para apicultura en Huancayo. Especialistas en derivados de la colmena.',
     '@id': 'https://apiculturaelite.es',
     url: 'https://apiculturaelite.es',
-    telephone: '+51 943 677 832',
+    telephone: '+51 923 614 856',
     priceRange: 'S/',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Av. Ferrocarril 1035, Real Plaza Huancayo',
+      streetAddress: 'Jr. Cusco 969',
       addressLocality: 'Huancayo',
       addressRegion: 'Junín',
       postalCode: '12001',
@@ -45,8 +45,8 @@ export default async function Home({
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: -12.0700833,
-      longitude: -75.2064669,
+      latitude: -12.0678,
+      longitude: -75.2092,
     },
     openingHoursSpecification: [
       {
@@ -57,7 +57,7 @@ export default async function Home({
       },
     ],
     sameAs: [
-      'https://www.facebook.com/apiculturaelite',
+      'https://www.facebook.com/share/1A8NpFfAHb/',
       'https://www.instagram.com/apiculturaelite'
     ]
   };

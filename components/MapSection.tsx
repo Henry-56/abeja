@@ -32,7 +32,7 @@ export default function MapSection() {
                                     <Navigation className="w-4 h-4 text-[#FFB900]" />
                                     Dirección
                                 </div>
-                                <p className="text-zinc-500 font-medium">Av. Ferrocarril 1035, <br />Real Plaza Huancayo 12001</p>
+                                <p className="text-zinc-500 font-medium">Jr. Cusco 969, <br />Huancayo 12001, Perú</p>
                             </div>
                             <div className="space-y-3">
                                 <div className="flex items-center gap-2 text-zinc-900 font-black uppercase tracking-widest text-xs">
@@ -44,7 +44,7 @@ export default function MapSection() {
                         </div>
 
                         <a
-                            href="https://maps.app.goo.gl/r2LhG6D99L8X6v9Z9"
+                            href="https://www.google.com/maps/search/Jr.+Cusco+969,+Huancayo"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-3 px-8 py-4 bg-zinc-900 text-white rounded-2xl font-bold hover:bg-black transition-all shadow-xl shadow-zinc-200"
@@ -56,7 +56,7 @@ export default function MapSection() {
                     {/* Map Container */}
                     <div className="w-full lg:w-3/5 h-[450px] md:h-[600px] rounded-[3rem] overflow-hidden border-8 border-white shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] relative group">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3901.625345688673!2d-75.20646692412852!3d-12.070083288168277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDA0JzEyLjMiUyA3NcKwMTInMTUuNCJX!5e0!3m2!1ses!2spe!4v1707400000000!5m2!1ses!2spe"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.654!2d-75.212!3d-12.068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e964923e3b3b5%3A0x6b6e4e4e4e4e4e4e!2sJr.%20Cusco%20969%2C%20Huancayo!5e0!3m2!1ses!2spe!4v1707400000000!5m2!1ses!2spe"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}

@@ -30,7 +30,7 @@ export default function Footer() {
                             ].map((social, i) => (
                                 <a
                                     key={i}
-                                    href="#"
+                                    href="https://www.facebook.com/share/1A8NpFfAHb/"
                                     className="w-12 h-12 bg-zinc-50 rounded-2xl flex items-center justify-center text-zinc-400 hover:bg-[#FFB900] hover:text-black hover:shadow-lg transition-all"
                                     aria-label={social.label}
                                 >
@@ -67,15 +67,15 @@ export default function Footer() {
                                 </div>
                                 <div>
                                     <p className="text-zinc-900 font-bold text-sm">Oficina Central</p>
-                                    <p className="text-zinc-500 text-sm">Sector Industrial, Huancayo 12001, Perú</p>
+                                    <p className="text-zinc-500 text-sm">Jr. Cusco 969, Huancayo 12001, Perú</p>
                                 </div>
                             </li>
                             <li className="flex items-center gap-4 group">
                                 <div className="p-3 bg-zinc-50 rounded-xl text-[#FFB900] group-hover:bg-[#FFB900] group-hover:text-black transition-all">
                                     <Phone className="w-5 h-5" />
                                 </div>
-                                <a href="tel:+51943677832" className="text-zinc-500 font-medium hover:text-zinc-900 transition-colors">
-                                    +51 943 677 832
+                                <a href="tel:+51923614856" className="text-zinc-500 font-medium hover:text-zinc-900 transition-colors">
+                                    +51 923 614 856
                                 </a>
                             </li>
                             <li className="flex items-center gap-4 group">
