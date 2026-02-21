@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://apiculturaelite.pe'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://apiculturaelite.es'),
   title: {
     default: 'Apicultura Elite | Miel Pura y Equipamiento Apícola en Huancayo',
     template: '%s | Apicultura Elite',
@@ -49,13 +49,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Apicultura Elite | Excelencia en Miel y Equipamiento',
     description: 'Productos de la colmena premium y equipamiento profesional en el corazón de Huancayo. Calidad garantizada.',
-    url: 'https://apiculturaelite.pe',
+    url: 'https://apiculturaelite.es',
     siteName: 'Apicultura Elite',
     locale: 'es_PE',
     type: 'website',
     images: [
       {
-        url: 'https://apiculturaelite.pe/logo-seo.png',
+        url: 'https://apiculturaelite.es/logo-seo.png',
         width: 1200,
         height: 630,
         alt: 'Apicultura Elite Logo',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: 'Apicultura Elite',
     description: 'Excelencia apícola en el centro del país. Miel pura y equipos de alta gama.',
     creator: '@apiculturaelite',
-    images: ['https://apiculturaelite.pe/logo-seo.png'],
+    images: ['https://apiculturaelite.es/logo-seo.png'],
   },
   robots: {
     index: true,
@@ -94,7 +94,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <head>
-        <link rel="canonical" href="https://apiculturaelite.pe" />
+        <link rel="canonical" href="https://apiculturaelite.es" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-zinc-900`}

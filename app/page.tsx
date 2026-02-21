@@ -29,10 +29,10 @@ export default async function Home({
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Apicultura Elite',
-    image: 'https://apiculturaelite.pe/logo-seo.png',
+    image: 'https://apiculturaelite.es/logo-seo.png',
     description: 'Venta de miel 100% pura y equipamiento profesional para apicultura en Huancayo. Especialistas en derivados de la colmena.',
-    '@id': 'https://apiculturaelite.pe',
-    url: 'https://apiculturaelite.pe',
+    '@id': 'https://apiculturaelite.es',
+    url: 'https://apiculturaelite.es',
     telephone: '+51 943 677 832',
     priceRange: 'S/',
     address: {
