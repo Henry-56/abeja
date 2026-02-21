@@ -6,7 +6,7 @@ import MapSection from '@/components/MapSection';
 import { db } from '@/lib/db';
 import { products } from '@/lib/schema';
 import { desc, eq } from 'drizzle-orm';
-import { ArrowRight, ShoppingBag, Star, Quote } from 'lucide-react';
+import { ArrowRight, ShoppingBag, Star, Quote, ShieldCheck, Truck, Clock } from 'lucide-react';
 import CategoryFilter from '@/components/CategoryFilter';
 
 export default async function Home({
@@ -27,13 +27,17 @@ export default async function Home({
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Store',
+    '@type': 'LocalBusiness',
     name: 'Apicultura Elite',
     image: 'https://images.unsplash.com/photo-1587334274328-64186a80aeee?auto=format&fit=crop&q=80&w=800',
-    description: 'Equipamiento profesional de apicultura y productos de la colmena premium.',
+    description: 'Venta de miel 100% pura y equipamiento profesional para apicultura en Huancayo. Especialistas en derivados de la colmena.',
+    '@id': 'https://apiculturaelite.pe',
+    url: 'https://apiculturaelite.pe',
+    telephone: '+51 943 677 832',
+    priceRange: 'S/',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Sector Industrial, Huancayo',
+      streetAddress: 'Av. Ferrocarril 1035, Real Plaza Huancayo',
       addressLocality: 'Huancayo',
       addressRegion: 'Junín',
       postalCode: '12001',
@@ -44,17 +48,18 @@ export default async function Home({
       latitude: -12.0700833,
       longitude: -75.2064669,
     },
-    url: 'https://apiculturaelite.pe',
-    telephone: '+51 943 677 832',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '08:00',
-        closes: '18:00',
+        opens: '10:00',
+        closes: '22:00',
       },
     ],
-    priceRange: '$$',
+    sameAs: [
+      'https://www.facebook.com/apiculturaelite',
+      'https://www.instagram.com/apiculturaelite'
+    ]
   };
 
   const testimonials = [
@@ -86,9 +91,8 @@ export default async function Home({
       />
       <Navbar />
 
-      {/* Hero Section - Professional White Redesign */}
+      {/* Hero Section */}
       <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-20">
-        {/* Background Patterns */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#FFB900]/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-yellow-100/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4"></div>
@@ -105,12 +109,12 @@ export default async function Home({
           </div>
 
           <div className="space-y-4">
-            <h1 className="text-7xl md:text-9xl font-black tracking-tighter leading-none text-zinc-900">
+            <h1 className="text-7xl md:text-9xl font-black tracking-tighter leading-none text-zinc-900 uppercase">
               APICULTURA
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#FFB900] to-[#E6A600] drop-shadow-sm">ELITE</span>
             </h1>
             <p className="text-xl md:text-2xl text-zinc-500 max-w-3xl mx-auto leading-relaxed font-light">
-              Innovación y tradición en cada gota. Ofrecemos equipamiento profesional y derivados 100% naturales con los más altos estándares de pureza.
+              Miel pura y equipamiento profesional en Huancayo. Innovación apícola con estándares internacionales de calidad.
             </p>
           </div>
 
@@ -122,7 +126,7 @@ export default async function Home({
               EXPLORAR CATÁLOGO <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="#contacto"
+              href="https://wa.me/51943677832"
               className="px-10 py-5 bg-white text-zinc-900 border border-zinc-200 rounded-2xl font-bold hover:bg-zinc-50 transition-all shadow-sm flex items-center gap-2 hover:border-zinc-300"
             >
               Contactar Experto
@@ -131,19 +135,45 @@ export default async function Home({
         </div>
       </section>
 
-      {/* Grid de Productos */}
+      {/* Features Overview for SEO */}
+      <section className="py-20 bg-zinc-50/50">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <div className="space-y-4">
+            <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm border border-zinc-100">
+              <ShieldCheck className="w-8 h-8 text-[#FFB900]" />
+            </div>
+            <h3 className="text-xl font-bold">100% Garantía de Pureza</h3>
+            <p className="text-zinc-500">Nuestra miel es analizada en laboratorio para asegurar cero adulteración.</p>
+          </div>
+          <div className="space-y-4">
+            <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm border border-zinc-100">
+              <Truck className="w-8 h-8 text-[#FFB900]" />
+            </div>
+            <h3 className="text-xl font-bold">Envíos a Todo el Perú</h3>
+            <p className="text-zinc-500">Llegamos a cada rincón del país con embalaje especializado y seguro.</p>
+          </div>
+          <div className="space-y-4">
+            <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm border border-zinc-100">
+              <Clock className="w-8 h-8 text-[#FFB900]" />
+            </div>
+            <h3 className="text-xl font-bold">Soporte Especializado</h3>
+            <p className="text-zinc-500">Asesoramos tu proyecto apícola desde la elección del equipo hasta la cosecha.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Catalog */}
       <section id="catalogo" className="max-w-7xl mx-auto px-4 py-32">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-          <div className="space-y-2">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 text-center md:text-left">
+          <div className="space-y-2 w-full">
             <h2 className="text-4xl md:text-6xl font-black tracking-tight text-zinc-900">
-              Nuestra <span className="text-[#FFB900]">Cosecha</span> & Equipamiento
+              Nuestra <span className="text-[#FFB900]">Cosecha</span> & Equipos
             </h2>
-            <div className="h-1.5 w-24 bg-[#FFB900] rounded-full"></div>
-            <p className="text-zinc-500 text-lg">Calidad garantizada del panal a tu hogar.</p>
+            <div className="h-1.5 w-24 bg-[#FFB900] rounded-full mx-auto md:mx-0"></div>
+            <p className="text-zinc-500 text-lg">Los mejores insumos para el apicultor moderno en Huancayo.</p>
           </div>
         </div>
 
-        {/* Categories Filter */}
         <CategoryFilter />
 
         {allProducts.length > 0 ? (
@@ -168,32 +198,23 @@ export default async function Home({
         )}
       </section>
 
-      {/* Testimonials Section */}
       <section className="bg-zinc-50 py-32 rounded-[4rem] mx-4 mb-32 relative overflow-hidden">
-        <div className="absolute top-0 right-0 p-10 opacity-[0.03]">
-          <Quote className="w-64 h-64 -rotate-12" />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="text-center space-y-4 mb-20">
-            <h2 className="text-4xl md:text-6xl font-black text-zinc-900">
-              Nuestros <span className="text-[#FFB900]">Clientes</span>
-            </h2>
-            <p className="text-zinc-500 text-lg">La confianza de quienes confían en la excelencia.</p>
-          </div>
-
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-6xl font-black text-zinc-900 mb-20">
+            Nuestros <span className="text-[#FFB900]">Clientes</span>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
-              <div key={i} className="bg-white p-10 rounded-[2.5rem] shadow-sm border border-zinc-100 space-y-6 hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
-                <div className="flex gap-1 text-[#FFB900]">
+              <div key={i} className="bg-white p-10 rounded-[2.5rem] shadow-sm border border-zinc-100 space-y-6">
+                <div className="flex justify-center gap-1 text-[#FFB900]">
                   {[...Array(t.rating)].map((_, idx) => (
                     <Star key={idx} className="w-5 h-5 fill-current" />
                   ))}
                 </div>
-                <p className="text-zinc-600 italic leading-relaxed text-lg">"{t.comment}"</p>
+                <p className="text-zinc-600 italic leading-relaxed text-lg text-center font-medium">"{t.comment}"</p>
                 <div>
-                  <h4 className="font-black text-zinc-900">{t.name}</h4>
-                  <p className="text-[#b8860b] text-sm font-bold uppercase tracking-widest">{t.role}</p>
+                  <h4 className="font-black text-zinc-900 uppercase tracking-tighter">{t.name}</h4>
+                  <p className="text-[#b8860b] text-[10px] font-black uppercase tracking-[0.2em]">{t.role}</p>
                 </div>
               </div>
             ))}
@@ -201,9 +222,7 @@ export default async function Home({
         </div>
       </section>
 
-      {/* Map Section */}
       <MapSection />
-
       <Footer />
     </main>
   );

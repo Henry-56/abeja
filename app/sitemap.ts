@@ -2,7 +2,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://dripstore.pe';
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://apiculturaelite.pe';
 
     return [
         {
@@ -11,6 +11,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'daily',
             priority: 1,
         },
-        // Si tuvieras páginas individuales de productos, las añadirías aquí dinámicamente
     ];
 }
