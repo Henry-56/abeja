@@ -24,7 +24,7 @@ export default function CartSidebar() {
     if (!isCartOpen) return null;
 
     const handleCheckout = () => {
-        const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '51943677832';
+        const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '51923614856';
 
         let message = "👋 ¡Hola Apicultura Elite! 🐝 Quiero realizar el siguiente pedido:\n\n";
         items.forEach((item) => {

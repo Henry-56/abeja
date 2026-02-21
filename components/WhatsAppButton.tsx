@@ -4,7 +4,7 @@
 import { MessageCircle } from 'lucide-react';
 
 export default function WhatsAppButton() {
-    const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '51943677832';
+    const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '51923614856';
     const message = "¡Hola Apicultura Elite! 🐝 Vengo de la página web y me gustaría consultar sobre sus productos de miel y equipamiento.";
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
